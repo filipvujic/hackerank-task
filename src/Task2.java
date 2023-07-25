@@ -29,8 +29,8 @@ public class Task2 {
             }
         }
         // Find the maximum value in abilitySums array
-        int maxAbility = 0;
-        maxAbility = Arrays.stream(abilitySums).max().getAsInt();
+        int maxAbility;
+        maxAbility = Arrays.stream(abilitySums).max().orElse(0);
         System.out.println("Highest overall ability sum of P44 team: " + maxAbility);
         return maxAbility;
     }
